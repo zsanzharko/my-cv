@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+hr {
+  margin: 1em 0;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-rendering: optimizeLegibility;
+  color: black;
+  background-color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+}
+button {
+  padding: 10px;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #297373;
+  font-weight: 700;
+  color: white;
+  transition: all 0.3s;
+}
+button:hover {
+  background-color: #81BE3D;
+  bottom: 1.5em;
+}
+li {
+  list-style: none;
+}
+/*** Nav Bar***/
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 5rem;
+  background: #FF621C;
+  display: -webkit-box;
+}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#brand {
+  display: flex;
+  margin: auto 0;
+}
+#word-mark {
+  margin: auto 1.5rem;
+}
+#logo {
+  width: 15%;
+  border-radius: 100%;
+}
+#menu {
+  margin: auto 0;
+}
+.menu_items {
+  display: flex;
+  text-align: center;
+}
+.menu_item {
+  font-size: 1.5em;
+  margin: auto 0;
+}
+.menu_item + .menu_item {
+  margin-left: 5em;
+}
+.menu_links {
+  padding: 1em 2em;
+  font-size: 1em;
+  background-color: #FF621C;
+}
+.menu_links:hover {
+  background-color: #ff8552;
+}
+/*** BODY container and content ***/
+.container {
+  width: 100vw;
+}
+.welcome {
+  height: 100vh;
+  background-image: url("https://images.wallpaperscraft.ru/image/chelovek_kapiushon_pole_137249_1920x1080.jpg");
+  padding: 5em;
+}
+.welcome__inner {
+  font-weight: 700;
+  font-size: 2em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 500px;
+}
+.welcome__inner .wp {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+.welcome__inner .w_btn {
+  width: 10em;
+  font-size: 1em;
+  background-color: #FF621C;
+}
+.welcome__inner .w_btn:hover {
+  background-color: #ff8552;
+}
+.photo {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.photo img {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(120%);
+  box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-top: -10px;
+}
+.photo .glow-wrap {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  margin-top: -10px;
+}
+.photo .glow {
+  display: block;
+  position: absolute;
+  width: 40%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  filter: blur(5px);
+  transform: rotate(45deg) translate(-450%, 0);
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.photo:hover img {
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.photo:hover img,
+.photo:hover .glow-wrap {
+  margin-top: 0;
+}
+.photo:hover .glow {
+  transform: rotate(45deg) translate(450%, 0);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.av_h {
+  position: absolute;
+  z-index: 1;
+  color: #E6E6E6;
+  transform: translate(-25%, -65%);
+  margin: 0;
+  line-height: 1.2;
+}
+/* Ends */
+#author {
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #888;
+}
+#author:hover {
+  color: #111;
+}
+.content {
+  padding: 5em 5%;
+  min-width: 20em;
+  background-color: #E6E6E6;
+}
+.content_info {
+  color: #39393A;
+  text-align: center;
+}
+.projects_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project_item {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  margin: 2rem;
+}
+.content_info .mh {
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+.content_info .mp {
+  margin-bottom: 2rem;
+}
+.pj_main {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  text-align: right;
+  background-color: white;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.pj_img {
+  width: 300px;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.pj_img:hover .project_item {
+  display: block;
+}
+.pj_h {
+  margin: 0.5em;
+}
+.pj_p {
+  height: 50px;
+  margin: 0.5em;
+  font-weight: 500;
+  font-size: 0.8em;
+}
+.pj_btn {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+.resume_container {
+  background-color: #39393A;
+  padding: 5em;
+}
+.resume {
+  background-color: white;
+  margin: auto;
+  padding: 1%;
+  width: 50%;
+}
+#resume {
+  text-align: center;
+}
+.resume__inner {
+  position: relative;
+  display: flex;
+}
+#avatar {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* Параметры тени */
+  position: absolute;
+  z-index: 2;
+  top: -10%;
+  left: -150px;
+  width: 250px;
+}
+.img_place {
+  width: 100px;
+  height: 450px;
+}
+.initials {
+  position: absolute;
+  z-index: 1;
+  width: 400px;
+  right: -1rem;
+  background-color: #39393A;
+  text-align: center;
+  color: #E6E6E6;
+  font-size: 1.5em;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 1em;
+}
+.resume_information .emptiness {
+  width: 20em;
+  height: 6em;
+}
+.resume_text {
+  width: 80%;
+  margin-left: auto;
+  font-weight: 500;
+}
+.resume_title {
+  text-align: end;
+  margin-right: 1rem;
+  width: 80%;
+  margin-left: auto;
+  font-weight: 700;
+}
+.skills_information {
+  width: 80%;
+  margin-left: auto;
+  font-weight: 500;
+}
+.skill_name {
+  margin-bottom: 0.5rem;
+}
+.skill {
+  width: 100%;
+  background-color: #ddd;
+}
+.skill__inner {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  width: 0;
+  border-radius: 0 1rem 1rem 0;
+  background-color: #E9D758;
+}
+.java {
+  width: 65%;
+}
+.python {
+  width: 30%;
+}
+.html,
+.css {
+  width: 50%;
+}
+.mr_top {
+  margin-top: 10px;
+}
+.last-hr {
+  margin-bottom: 4em;
+}
+.links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.ul_link + .ul_link {
+  margin-left: 1.5rem;
+}
+.link {
+  font-size: 2em;
+  color: black;
+}
+.contact__inner {
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+  background-color: white;
+  padding: 1rem;
+}
+.contact_image {
+  position: absolute;
+  z-index: 100;
+  top: -5rem;
+  right: -10rem;
+  width: 300px;
+  border-radius: 100%;
+}
+.contact_title {
+  text-align: center;
+}
+.contact_p {
+  font-weight: 500;
+  margin: 1em;
+  width: 50%;
+}
+.contact_form {
+  text-align: center;
+}
+.form__group {
+  margin: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+.form__input {
+  background-color: #39393A;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  color: #39393A;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+.submit {
+  margin: auto;
+  padding: 1rem 2rem;
+}
+/*# sourceMappingURL=portfolio.css.map */
